@@ -30,7 +30,7 @@ const App = () => {
     setLoading(true);
     try {
       const endpoint = isLogin ? '/api/auth/login' : '/api/auth/register';
-      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const apiUrl = import.meta.env.VITE_API_URL || 'https://smart-gym-progress-predictor.onrender.com/';
       const res = await axios.post(`${apiUrl}${endpoint}`, authData);
       setToken(res.data.token);
       setUser(res.data.username);
